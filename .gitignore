@@ -13,6 +13,8 @@ desktop.ini
 node_modules/
 dist/
 build/
+.next/
+out/
 .env
 
 # Antigravity artifacts (optional, keeping them for now but usually ignored in production)
