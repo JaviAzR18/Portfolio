@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Javier Aznar Ruiz — Data Analyst & ML Engineer. Portfolio showcasing data science projects, machine learning models, and professional experience." />
+  <meta name="keywords" content="Data Analyst, ML Engineer, Python, Machine Learning, BigQuery, PySpark, Portfolio" />
+  <meta name="author" content="Javier Aznar Ruiz" />
+  <title>Javier Aznar Ruiz — Data Analyst & ML Engineer</title>
+  <link rel="icon" type="image/svg+xml" href="public/favicon.svg">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Javier Aznar Ruiz — Data Analyst & ML Engineer" />
+  <meta property="og:description"
+    content="Portfolio of Javier Aznar Ruiz, Data Analyst & ML Engineer based in Valencia, Spain." />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ===== Background Orbs ===== -->
+  <div class="bg-orbs" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
+  <!-- ===== Mobile Nav Overlay ===== -->
+  <div class="nav-mobile-overlay" id="mobileNav" role="navigation" aria-label="Mobile Navigation">
+    <button class="nav-close" id="navClose" aria-label="Close menu">✕</button>
+    <a href="#about" onclick="closeMobileNav()">About</a>
+    <a href="#experience" onclick="closeMobileNav()">Experience</a>
+    <a href="#education" onclick="closeMobileNav()">Education</a>
+    <a href="#skills" onclick="closeMobileNav()">Skills</a>
+    <a href="#projects" onclick="closeMobileNav()">Projects</a>
+    <a href="#contact" onclick="closeMobileNav()">Contact</a>
+  </div>
+
+  <!-- ===== Navigation ===== -->
+  <nav id="navbar" role="navigation" aria-label="Main Navigation">
+    <ul class="nav-links">
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#experience" class="nav-link">Experience</a></li>
+      <li><a href="#education" class="nav-link">Education</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+      <li>
+        <div class="theme-select" id="themeSelect">
+          <button class="theme-select-trigger" id="themeSelectTrigger" aria-label="Select Theme" title="Switch Theme">
+            <svg class="theme-icon" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+              fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <!-- Active icon will be injected by JS -->
+            </svg>
+          </button>
+          <div class="theme-options" id="themeOptions">
+            <button class="theme-option" data-theme-value="light" title="Light Mode">
+              <svg width="18" height="18" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
+                <path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" />
+              </svg>
+              <span>Light</span>
+            </button>
+            <button class="theme-option" data-theme-value="dark" title="Dark Mode">
+              <svg width="18" height="18" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+              </svg>
+              <span>Dark</span>
+            </button>
+            <button class="theme-option" data-theme-value="system" title="System Preference">
+              <svg width="18" height="18" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M3 5a1 1 0 0 1 1 -1h16a1 1 0 0 1 1 1v10a1 1 0 0 1 -1 1h-16a1 1 0 0 1 -1 -1z" />
+                <path d="M7 20h10" />
+                <path d="M9 16v4" />
+                <path d="M15 16v4" />
+              </svg>
+              <span>System</span>
+            </button>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ===== Hero Section ===== -->
+  <section id="hero" aria-label="Hero">
+    <div class="hero-bg-image" aria-hidden="true"></div>
+    <div class="hero-bg-overlay" aria-hidden="true"></div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="dot" aria-hidden="true"></span>
+        <a href="https://linkedin.com/in/javier-aznar-ruiz" target="_blank" rel="noopener noreferrer"
+          class="hero-badge-link">
+          Available for opportunities
+        </a>
+      </div>
+      <h1 class="hero-name">
+        Javier<br /><span class="gradient-text">Aznar Ruiz</span>
+      </h1>
+      <p class="hero-title">
+        <span style="color: white;">Data Analyst</span> &amp; <span>ML Engineer</span>
+      </p>
+      <p class="hero-description">
+        3+ years of experience across software development, now moving into data engineering and machine learning
+        — Valencia, Spain.
+      </p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn-primary" id="hero-view-projects">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            aria-hidden="true">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+            <polyline points="22 4 12 14.01 9 11.01" />
+          </svg>
+          View Projects
+        </a>
+        <a href="https://linkedin.com/in/javier-aznar-ruiz" class="contact-link linkedin" id="contact-linkedin-link"
+          target="_blank" rel="noopener noreferrer">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path
+              d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2zm2-4a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" />
+          </svg>
+          LinkedIn
+        </a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint" aria-hidden="true">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ===== About Section ===== -->
+  <section id="about" aria-label="About">
+    <div class="container">
+      <div class="section-title reveal">
+        <p class="section-label">// who I am</p>
+        <h2 class="section-heading">
+          <svg class="size-8" width="40" height="40" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+            fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+            <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+          </svg>
+          About <span class="gradient-text">Me</span>
+        </h2>
+      </div>
+
+      <div class="about-grid">
+        <!-- Photo column -->
+        <div class="about-photo-col reveal">
+          <div class="about-photo-wrapper">
+            <img src="public/photo.webp" alt="Javier Aznar Ruiz" class="about-photo" />
+            <div class="about-photo-glow" aria-hidden="true"></div>
+          </div>
+        </div>
+
+        <!-- Text column -->
+        <div class="about-text reveal reveal-delay-1">
+          <p>
+            I'm a <strong>Data Analyst & ML Engineer</strong> with over 3 years of professional experience in software
+            development. My journey began in video game development with Unity and C#, which gave me a strong
+            engineering foundation.
+          </p>
+          <p>
+            Over time, I expanded into <strong>web application development</strong> (frontend and backend) and
+            pivoted toward data engineering and machine learning. I recently completed an
+            <strong>Executive Master's in Big Data and Artificial Intelligence</strong>.
+          </p>
+          <p>
+            I'm experienced with <strong>Python, SQL, PySpark, BigQuery</strong> and <strong>Power BI</strong>, with
+            hands-on projects in predictive modelling and data-driven applications. I'm eager to apply these
+            analytical skills in consulting environments, helping clients transform data into decisions.
+          </p>
+          <div class="contact-info" style="margin-top:1.5rem;">
+            <div class="contact-item" id="about-email-link" onclick="copyEmail()">
+              <div class="icon">✉</div>
+              javieraznarruiz@gmail.com
+            </div>
+            <a href="https://linkedin.com/in/javier-aznar-ruiz" class="contact-item" id="about-linkedin-link"
+              target="_blank" rel="noopener noreferrer">
+              <div class="icon">in</div>
+              linkedin.com/in/javier-aznar-ruiz
+            </a>
+            <div class="contact-item" id="about-phone-link" onclick="copyPhone()">
+              <div class="icon">📞</div>
+              +34 634 93 18 07
+            </div>
+            <div class="contact-item">
+              <div class="icon">📍</div>
+              Valencia, Spain
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== Experience Section ===== -->
+  <section id="experience" aria-label="Experience">
+    <div class="container">
+      <div class="section-title reveal">
+        <p class="section-label">// where I've worked</p>
+        <h2 class="section-heading"><svg class="size-8" width="40" height="40" viewBox="0 0 24 24" stroke-width="2"
+            stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M3 7m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z"></path>
+            <path d="M8 7v-2a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v2"></path>
+            <path d="M12 12l0 .01"></path>
+            <path d="M3 13a20 20 0 0 0 18 0"></path>
+          </svg> Work <span class="gradient-text">Experience</span></h2>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-meta">
+              <span class="timeline-company">FuntechRocket</span>
+              <span class="timeline-date">Mar 2022 – Nov 2025</span>
+            </div>
+            <div class="timeline-role"><strong>Software Developer</strong></div>
+            <ul class="timeline-list">
+              <li>Developed a unified enhancement of components and scripts to technically converge the company's
+                product delivery pipeline and accelerate release cycles.</li>
+              <li>Contributed an innovative new engine for executing a flexible programming environment based on actors
+                and events-driven architecture.</li>
+              <li>Implemented CI/CD practices improving software delivery efficiency — reducing deployment times by over
+                60% and minimizing production errors.
+              </li>
+              <li>Built in-house tooling for sending and receiving messages from users within the platform.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== Education Section ===== -->
+  <section id="education" aria-label="Education">
+    <div class="container">
+      <div class="section-title reveal">
+        <p class="section-label">// my background</p>
+        <h2 class="section-heading">
+          <svg class="size-8" width="40" height="40" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+            fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M22 9l-10 -4l-10 4l10 4l10 -4v6" />
+            <path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4" />
+          </svg>
+          Education &amp; <span class="gradient-text">Training</span>
+        </h2>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-dot edu-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-meta">
+              <span class="timeline-company" style="color: var(--accent-purple);">Intecssa – Inertia Institute</span>
+              <span class="timeline-date">Oct 2024 – Mar 2026</span>
+            </div>
+            <div class="timeline-role">Executive Master's in Big Data &amp; Artificial Intelligence · Online</div>
+            <ul class="timeline-list">
+              <li>Advanced ML models: regression, classification, clustering, and neural networks.</li>
+              <li>Big Data technologies: PySpark, cloud data pipelines on AWS, Azure &amp; GCP.</li>
+              <li>Applied projects in natural language processing and computer vision.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal reveal-delay-2">
+          <div class="timeline-dot edu-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-meta">
+              <span class="timeline-company" style="color: var(--accent-purple);">Universidad Politécnica de
+                Valencia</span>
+              <span class="timeline-date">Graduated May 2022</span>
+            </div>
+            <div class="timeline-role">Bachelor's Degree in Telecommunications Technologies &amp; Services · Valencia,
+              Spain</div>
+            <ul class="timeline-list">
+              <li>Solid foundation in signal processing, networks, and software engineering principles.</li>
+              <li>
+                <span>
+                  <strong>Final thesis: Augmented Reality Application for Teaching Faraday-Lenz's Law</strong>
+                  <span style="display: block; margin-top: 0.5rem; opacity: 0.9; line-height: 1.6;">
+                    I developed an Android mobile application based on Augmented Reality aimed at educational use in the
+                    Physics laboratory of ETSIT (Universitat Politècnica de València). The project's goal is to
+                    facilitate
+                    the understanding of the electromagnetic induction phenomenon through an interactive and immersive
+                    experience accessible from any smartphone.
+                  </span>
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== Skills Section ===== -->
+  <section id="skills" aria-label="Skills">
+    <div class="container">
+      <div class="section-title reveal">
+        <p class="section-label">// what I use</p>
+        <h2 class="section-heading">
+          <svg class="size-8" width="40" height="40" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+            fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M7 8l-4 4l4 4" />
+            <path d="M17 8l4 4l-4 4" />
+            <path d="M14 4l-4 16" />
+          </svg>
+          Tech <span class="gradient-text">Stack</span>
+        </h2>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-category reveal reveal-delay-1">
+          <div class="skill-category-header">
+            <div class="skill-category-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M3 19l18 0" />
+                <path d="M5 6m0 1a1 1 0 0 1 1 -1h12a1 1 0 0 1 1 1v8a1 1 0 0 1 -1 1h-12a1 1 0 0 1 -1 -1z" />
+              </svg>
+            </div>
+            <h3>Programming Languages</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="16 16 32 32">
+                <path fill="url(#python__a)"
+                  d="M31.885 16c-8.124 0-7.617 3.523-7.617 3.523l.01 3.65h7.752v1.095H21.197S16 23.678 16 31.876c0 8.196 4.537 7.906 4.537 7.906h2.708v-3.804s-.146-4.537 4.465-4.537h7.688s4.32.07 4.32-4.175v-7.019S40.374 16 31.885 16zm-4.275 2.454a1.394 1.394 0 1 1 0 2.79 1.393 1.393 0 0 1-1.395-1.395c0-.771.624-1.395 1.395-1.395z" />
+                <path fill="url(#python__b)"
+                  d="M32.115 47.833c8.124 0 7.617-3.523 7.617-3.523l-.01-3.65H31.97v-1.095h10.832S48 40.155 48 31.958c0-8.197-4.537-7.906-4.537-7.906h-2.708v3.803s.146 4.537-4.465 4.537h-7.688s-4.32-.07-4.32 4.175v7.019s-.656 4.247 7.833 4.247zm4.275-2.454a1.393 1.393 0 0 1-1.395-1.395 1.394 1.394 0 1 1 1.395 1.395z" />
+                <defs>
+                  <linearGradient id="python__a" x1="19.075" x2="34.898" y1="18.782" y2="34.658"
+                    gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#387EB8" />
+                    <stop offset="1" stop-color="#366994" />
+                  </linearGradient>
+                  <linearGradient id="python__b" x1="28.809" x2="45.803" y1="28.882" y2="45.163"
+                    gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#FFE052" />
+                    <stop offset="1" stop-color="#FFC331" />
+                  </linearGradient>
+                </defs>
+              </svg>
+              Python
+            </span>
+            <span class="skill-tag">
+              <svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 32 32">
+                <path fill="currentColor"
+                  d="M16 25.093c-8.839 0-16-4.796-16-10.719C0 8.458 7.161 3.661 16 3.661s16 4.797 16 10.713c0 5.923-7.161 10.719-16 10.719zm2.448-17.244c-6.713 0-12.161 3.281-12.161 7.328s5.448 7.328 12.161 7.328c6.713 0 11.677-2.245 11.677-7.328 0-5.084-4.959-7.328-11.677-7.328zm5.916 12.411a11.43 11.43 0 0 1 1.537.579c.287.14.547.328.776.552.14.151.26.323.353.511l3.819 6.437h-6.172l-2.885-5.417a6.764 6.764 0 0 0-.953-1.307.994.994 0 0 0-.735-.333H18.64v7.052l-5.457.005V10.318h10.963s4.991.089 4.991 4.839a5.097 5.097 0 0 1-4.772 5.104zm-2.369-6.036h-3.307v3.063h3.307a1.515 1.515 0 0 0 1.532-1.557 1.428 1.428 0 0 0-1.532-1.505z" />
+              </svg>
+              R
+            </span>
+            <span class="skill-tag">
+              <svg width="800px" height="800px" viewBox="-8.78 0 70 70" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="m 852.97077,1013.9363 c -6.55238,-0.4723 -13.02857,-2.1216 -17.00034,-4.3296 -2.26232,-1.2576 -3.98589,-2.8032 -4.66223,-4.1807 l -0.4024,-0.8196 0,-25.70807 0,-25.7081 0.31843,-0.6465 c 1.42297,-2.889 5.96432,-5.4935 12.30378,-7.0562 2.15195,-0.5305 5.2586,-1.0588 7.79304,-1.3252 2.58797,-0.2721 9.44765,-0.2307 12.02919,0.073 6.86123,0.8061 12.69967,2.6108 16.29768,5.0377 1.38756,0.9359 2.81137,2.4334 3.29371,3.4642 l 0.41358,0.8838 -0.0354,25.6303 -0.0354,25.63047 -0.33195,0.6744 c -0.18257,0.3709 -0.73406,1.1007 -1.22553,1.6216 -2.99181,3.1715 -9.40919,5.5176 -17.8267,6.5172 -1.71567,0.2038 -9.16916,0.3686 -10.92937,0.2417 z m 12.07501,-22.02839 c -0.0252,-0.0657 -1.00472,-0.93831 -2.17671,-1.93922 -1.17199,-1.00091 -2.18138,-1.86687 -2.24309,-1.92436 -0.0617,-0.0575 0.15481,-0.26106 0.48117,-0.45237 0.32635,-0.19131 0.95163,-0.7235 1.3895,-1.18265 1.2805,-1.34272 1.88466,-3.00131 1.88466,-5.17388 0,-2.1388 -0.65162,-3.8645 -1.95671,-5.1818 -1.31533,-1.3278 -2.82554,-1.8983 -5.02486,-1.8983 -3.39007,0 -5.99368,1.9781 -6.82468,5.1851 -0.28586,1.1031 -0.28432,3.33211 0.003,4.31023 0.74941,2.55136 2.79044,4.40434 5.33062,4.83946 0.8596,0.14724 0.97605,0.21071 1.5621,0.85144 0.34829,0.38078 1.06301,1.14085 1.58827,1.68904 l 0.95501,0.9967 2.53878,0 c 1.39633,0 2.51816,-0.0537 2.49296,-0.11939 z m -8.70653,-7.10848 c -0.61119,-0.31868 -0.84225,-0.56599 -1.19079,-1.27453 -0.26919,-0.54724 -0.31522,-0.85851 -0.31824,-2.15197 -0.003,-1.3143 0.0388,-1.5983 0.31987,-2.169 0.45985,-0.9339 1.09355,-1.376 2.07384,-1.4469 1.36454,-0.099 2.15217,0.5707 2.56498,2.1801 0.50612,1.97321 -0.0504,4.07107 -1.26471,4.76729 -0.63707,0.36527 -1.58737,0.40659 -2.18495,0.095 z m -11.25315,3.66269 c 2.66179,-0.5048 4.1728,-2.0528 4.1728,-4.27495 0,-1.97137 -0.97548,-3.12004 -3.6716,-4.32364 -1.54338,-0.689 -2.10241,-1.1215 -2.10241,-1.6268 0,-0.4188 0.53052,-0.8777 1.14813,-0.993 0.60302,-0.1126 2.20237,0.1652 3.14683,0.5467 l 0.79167,0.3198 0,-1.7524 0,-1.7525 -0.85923,-0.1906 c -0.53103,-0.1178 -1.64689,-0.1885 -2.92137,-0.1849 -1.80528,0 -2.15881,0.044 -2.83818,0.3138 -1.98445,0.7878 -2.92613,2.1298 -2.91107,4.1485 0.0141,1.8898 1.01108,3.06864 3.49227,4.12912 1.46399,0.62572 2.05076,1.10218 2.05076,1.66522 0,1.1965 -1.99362,1.34375 -4.10437,0.30315 -0.57805,-0.28498 -1.09739,-0.54137 -1.1541,-0.56976 -0.0567,-0.0284 -0.10311,0.79023 -0.10311,1.81917 0,1.86239 0.002,1.87137 0.33919,1.99974 1.26979,0.48278 4.07626,0.69787 5.52379,0.42335 z m 30.4308,-1.72766 0,-1.58098 -2.40584,0 -2.40583,0 0,-5.43035 0,-5.4303 -2.13089,0 -2.13088,0 0,7.0113 0,7.01131 4.53672,0 4.53672,0 0,-1.58098 z m -14.84745,-27.70503 c 4.23447,-0.2937 7.4086,-0.8482 10.20178,-1.7821 2.78264,-0.9304 4.42643,-2.0562 4.79413,-3.2834 0.14166,-0.4729 0.13146,-0.6523 -0.0665,-1.1708 -0.88775,-2.3245 -5.84694,-4.1104 -13.42493,-4.8345 -3.24154,-0.3098 -9.13671,-0.2094 -12.22745,0.2081 -4.71604,0.6372 -8.54333,1.8208 -10.2451,3.1683 -3.44251,2.726 0.19793,5.7242 8.66397,7.1354 3.67084,0.6119 8.42674,0.828 12.30414,0.559 z"
+                  fill="currentColor" transform="translate(-830.906 -943.981)" />
+              </svg>
+              SQL
+            </span>
+            <span class="skill-tag">
+              <svg xmlns="http://www.w3.org/2000/svg" width="2222" height="2500" preserveAspectRatio="xMidYMid"
+                viewBox="0 -1.43 255.58 290.11">
+                <path fill="#a179dc"
+                  d="M255.57 84.45c0-4.83-1.04-9.1-3.13-12.76a24.4 24.4 0 0 0-9.24-9C209.17 43.05 175.1 23.5 141.1 3.86c-9.17-5.3-18.06-5.1-27.16.27-13.54 7.98-81.35 46.83-101.55 58.53C4.06 67.5.02 74.87 0 84.44v118.37c0 4.72 1 8.9 2.99 12.51 2.05 3.72 5.17 6.82 9.38 9.26 20.21 11.7 88.02 50.55 101.56 58.53 9.11 5.38 18 5.57 27.17.27 34.02-19.64 68.08-39.2 102.1-58.81a24.33 24.33 0 0 0 9.4-9.25c1.99-3.61 2.98-7.8 2.98-12.52l-.01-118.35" />
+                <path fill="#280068"
+                  d="M128.18 143.24 2.98 215.33c2.06 3.7 5.18 6.8 9.4 9.25 20.2 11.7 88.01 50.55 101.55 58.53 9.11 5.38 18 5.57 27.17.27 34.02-19.64 68.08-39.2 102.1-58.81a24.33 24.33 0 0 0 9.4-9.25z" />
+                <path fill="#390091"
+                  d="M255.57 84.45c0-4.83-1.04-9.1-3.13-12.76l-124.26 71.55 124.41 72.07c2-3.6 2.99-7.79 3-12.51 0 0 0-78.9-.02-118.35" />
+                <g fill="#fff">
+                  <path
+                    d="M201.9 116.3v13.47h13.47v-13.48h6.73v13.48h13.48v6.73H222.1v13.48h13.48v6.74H222.1v13.47h-6.73V156.7h-13.48v13.48h-6.73V156.7h-13.48v-6.73h13.47V136.5h-13.47v-6.74h13.47v-13.48zm13.47 20.2h-13.48v13.48h13.48z" />
+                  <path
+                    d="M128.46 48.63a94.96 94.96 0 0 1 82.26 47.45l-.16-.27-41.35 23.8A47.28 47.28 0 0 0 129 96.33h-.54a47.3 47.3 0 0 0-47.3 47.3 47.08 47.08 0 0 0 6.23 23.47 47.28 47.28 0 0 0 82.29-.27l-.2.35 41.29 23.91a94.97 94.97 0 0 1-81.25 47.54h-1.06a94.96 94.96 0 0 1-95-95 95 95 0 0 1 95-95z" />
+                </g>
+              </svg>
+              C#
+            </span>
+            <span class="skill-tag">
+              <svg xmlns="http://www.w3.org/2000/svg" width="2500" height="2500" viewBox="0 0 1052 1052">
+                <path fill="#f0db4f" d="M0 0h1052v1052H0z" />
+                <path
+                  d="M965.9 801.1c-7.7-48-39-88.3-131.7-125.9-32.2-14.8-68.1-25.399-78.8-49.8-3.8-14.2-4.3-22.2-1.9-30.8 6.9-27.9 40.2-36.6 66.6-28.6 17 5.7 33.1 18.801 42.8 39.7 45.4-29.399 45.3-29.2 77-49.399-11.6-18-17.8-26.301-25.4-34-27.3-30.5-64.5-46.2-124-45-10.3 1.3-20.699 2.699-31 4-29.699 7.5-58 23.1-74.6 44-49.8 56.5-35.6 155.399 25 196.1 59.7 44.8 147.4 55 158.6 96.9 10.9 51.3-37.699 67.899-86 62-35.6-7.4-55.399-25.5-76.8-58.4-39.399 22.8-39.399 22.8-79.899 46.1 9.6 21 19.699 30.5 35.8 48.7 76.2 77.3 266.899 73.5 301.1-43.5 1.399-4.001 10.6-30.801 3.199-72.101zm-394-317.6h-98.4c0 85-.399 169.4-.399 254.4 0 54.1 2.8 103.7-6 118.9-14.4 29.899-51.7 26.2-68.7 20.399-17.3-8.5-26.1-20.6-36.3-37.699-2.8-4.9-4.9-8.7-5.601-9-26.699 16.3-53.3 32.699-80 49 13.301 27.3 32.9 51 58 66.399 37.5 22.5 87.9 29.4 140.601 17.3 34.3-10 63.899-30.699 79.399-62.199 22.4-41.3 17.6-91.3 17.4-146.6.5-90.2 0-180.4 0-270.9z"
+                  fill="#323330" />
+              </svg>
+              JavaScript
+            </span>
+          </div>
+        </div>
+
+        <div class="skill-category reveal reveal-delay-2">
+          <div class="skill-category-header">
+            <div class="skill-category-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M12 3l8 4.5l0 9l-8 4.5l-8 -4.5l0 -9l8 -4.5" />
+                <path d="M12 12l8 -4.5" />
+                <path d="M12 12l0 9" />
+                <path d="M12 12l-8 -4.5" />
+                <path d="M16 5.25l-8 4.5" />
+              </svg>
+            </div>
+            <h3>Libraries & Frameworks</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">
+              <svg width="800px" height="800px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                <title>file_type_numpy</title>
+                <polygon points="14.048 7.689 9.405 5.327 4.309 7.89 9.078 10.303 14.048 7.689" style="fill:#4dabcf" />
+                <polygon points="16.177 8.771 21.045 11.247 15.994 13.803 11.218 11.386 16.177 8.771"
+                  style="fill:#4dabcf" />
+                <polygon points="22.678 5.363 27.679 7.89 23.207 10.153 18.328 7.674 22.678 5.363"
+                  style="fill:#4dabcf" />
+                <polygon points="20.526 4.274 16.023 2 11.57 4.239 16.209 6.597 20.526 4.274" style="fill:#4dabcf" />
+                <polygon points="17.006 23.809 17.006 30 22.46 27.258 22.454 21.064 17.006 23.809"
+                  style="fill:#4dabcf" />
+                <polygon points="22.452 18.903 22.446 12.774 17.006 15.499 17.006 21.63 22.452 18.903"
+                  style="fill:#4dabcf" />
+                <polygon points="29 17.754 29 23.969 24.348 26.308 24.345 20.122 29 17.754" style="fill:#4dabcf" />
+                <polygon points="29 15.581 29 9.491 24.339 11.826 24.343 17.967 29 15.581" style="fill:#4dabcf" />
+                <path
+                  d="M15.08,15.5l-3.674-1.861v8.045S6.913,12.05,6.5,11.185a.9.9,0,0,0-.331-.264C5.361,10.5,3,9.29,3,9.29V23.5L6.266,25.26V17.832s4.445,8.607,4.49,8.7a4.026,4.026,0,0,0,.968,1.32c.635.423,3.357,2.073,3.357,2.073Z"
+                  style="fill:#4d77cf" />
+              </svg>
+              NumPy
+            </span>
+            <span class="skill-tag">
+              <svg fill="currentColor" width="800px" height="800px" viewBox="0 0 32 32" version="1.1"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M11.849 2.813h3.269v6.787h-3.268zM11.849 16.755h3.269v6.789h-3.268zM11.849 11.582h3.269v3.203h-3.268zM6.598 8.393h3.268v22.563h-3.269zM16.992 22.356h3.269v6.787h-3.269zM16.992 8.401h3.269v6.787h-3.269zM16.992 17.171h3.269v3.203h-3.269zM22.134 1.045h3.269v22.563h-3.269z">
+                </path>
+              </svg>
+              Pandas
+            </span>
+            <span class="skill-tag">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+                <path fill="#f89939"
+                  d="M98.18 88.13c15.63-15.62 18.23-38.36 5.8-50.78-12.43-12.42-35.17-9.82-50.8 5.8-15.63 15.62-11.11 45.48-5.8 50.78 4.29 4.29 35.17 9.82 50.8-5.8Z" />
+                <path fill="#3499cd"
+                  d="M34.04 65.56c-9.07-9.06-22.27-10.57-29.48-3.37-7.21 7.21-5.7 20.4 3.37 29.46 9.07 9.07 26.4 6.44 29.48 3.37 2.49-2.49 5.71-20.4-3.37-29.46Z" />
+              </svg>
+              Scikit-learn
+            </span>
+            <span class="skill-tag">
+              <svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+                <g fill="#AFDAD2" stroke="#FFF" stroke-width=".25">
+                  <path
+                    d="M100.427 73.98a4.803 4.803 0 1 0 0-9.606a4.803 4.803 0 0 0 0 9.606Zm-10.343 7.242a4.652 4.652 0 1 0 0-9.304a4.652 4.652 0 0 0 0 9.304Zm-9.949 4.608a4.38 4.38 0 1 0 0-8.76a4.38 4.38 0 0 0 0 8.76Zm29.017-17.572a4.946 4.946 0 1 0 0-9.89a4.946 4.946 0 0 0 0 9.89ZM72.67 75.444a3.323 3.323 0 1 0 0-6.646a3.323 3.323 0 0 0 0 6.646Zm-8.205 18.204a3.948 3.948 0 1 0 0-7.896a3.948 3.948 0 0 0 0 7.896Zm5.022-31.26a4.757 4.757 0 1 0 0-9.515a4.757 4.757 0 0 0 0 9.515Zm12.837 8.902a3.68 3.68 0 1 0 0-7.358a3.68 3.68 0 0 0 0 7.359Zm63.444-10.98a4.302 4.302 0 1 0 0-8.605a4.302 4.302 0 0 0 0 8.605ZM55.535 83.116a2.608 2.608 0 1 0 0-5.216a2.608 2.608 0 0 0 0 5.216ZM64.2 80.66a3.095 3.095 0 1 0 0-6.189a3.095 3.095 0 0 0 0 6.19Zm-15.801-9.806a4.103 4.103 0 1 0 0-8.205a4.103 4.103 0 0 0 0 8.205Zm16.141-1.808a2.139 2.139 0 1 0 0-4.277a2.139 2.139 0 0 0 0 4.277Zm28.635-3.334a3.992 3.992 0 1 0 0-7.985a3.992 3.992 0 0 0 0 7.985Zm30.33 2.311a3.446 3.446 0 1 0 0-6.891a3.446 3.446 0 0 0 0 6.89Zm6.307-21.497a2.255 2.255 0 1 0 0-4.51a2.255 2.255 0 0 0 0 4.51Zm7.331 12.982a3.768 3.768 0 1 0 0-7.536a3.768 3.768 0 0 0 0 7.536ZM99.5 57.31a3.872 3.872 0 1 0 0-7.744a3.872 3.872 0 0 0 0 7.744ZM50.998 94.521a3.142 3.142 0 1 0 0-6.284a3.142 3.142 0 0 0 0 6.284Z" />
+                  <path
+                    d="M154.48 61.132a4.785 4.785 0 1 0 0-9.57a4.785 4.785 0 0 0 0 9.57Zm-46.171-3.241a4.392 4.392 0 1 0 0-8.784a4.392 4.392 0 0 0 0 8.784Zm-51.029 3.54a4.072 4.072 0 1 0 0-8.144a4.072 4.072 0 0 0 0 8.144Zm22.662-10.513a4.708 4.708 0 1 0 0-9.416a4.708 4.708 0 0 0 0 9.416Zm88.325 6.34a2.908 2.908 0 1 0 0-5.816a2.908 2.908 0 0 0 0 5.816ZM66.977 45.382a3.7 3.7 0 1 0 0-7.398a3.7 3.7 0 0 0 0 7.398ZM83.658 61.95a3.148 3.148 0 1 0 0-6.296a3.148 3.148 0 1 0 0 6.296ZM7.542-6.832a3.199 3.199 0 1 0-.001-6.397a3.199 3.199 0 0 0 0 6.397Zm-49.398 8.125a3.22 3.22 0 1 0 0-6.44a3.22 3.22 0 0 0 0 6.44Zm8.868-12.521a2.954 2.954 0 1 0 0-5.908a2.954 2.954 0 0 0 0 5.908Zm68.154 9.171a2.476 2.476 0 1 0 0-4.953a2.476 2.476 0 0 0 0 4.953ZM39.53 79.544a4.092 4.092 0 1 0 0-8.185a4.092 4.092 0 0 0 0 8.185Zm-9.14-6.9a3.077 3.077 0 1 0 0-6.153a3.077 3.077 0 0 0 0 6.153Zm96.879-13.47a3.095 3.095 0 1 0 0-6.19a3.095 3.095 0 0 0 0 6.19ZM56.914 75.243a4.77 4.77 0 1 0 0-9.542a4.77 4.77 0 0 0 0 9.542Z" />
+                  <path
+                    d="M162.01 53.552a4.783 4.783 0 1 0 0-9.565a4.783 4.783 0 0 0 0 9.565ZM42.067 98.617a2.776 2.776 0 1 0 0-5.552a2.776 2.776 0 0 0 0 5.552Zm69.34-54.147a3.817 3.817 0 1 0 0-7.633a3.817 3.817 0 0 0 0 7.633Zm79.294 5.256a3.899 3.899 0 1 0 0-7.798a3.899 3.899 0 0 0 0 7.798Zm-51.863-1.986a3.104 3.104 0 1 0 0-6.21a3.104 3.104 0 0 0 0 6.21Zm-67.68 40.953a4.047 4.047 0 1 0 0-8.095a4.047 4.047 0 0 0 0 8.095Zm78.208-39.617a3.875 3.875 0 1 0 0-7.75a3.875 3.875 0 0 0 0 7.75Zm27.438 3.777a3.211 3.211 0 1 0 0-6.423a3.211 3.211 0 0 0 0 6.423Zm30.314 6.96a2.895 2.895 0 1 0 0-5.79a2.895 2.895 0 0 0 0 5.79ZM98.802 38.544a2.495 2.495 0 1 0 0-4.99a2.495 2.495 0 0 0 0 4.99Zm22.683-6.848a3.652 3.652 0 1 0 0-7.305a3.652 3.652 0 0 0 0 7.305Zm84.987 19.578a4.812 4.812 0 1 0 0-9.624a4.812 4.812 0 0 0 0 9.624Zm-90.498 1.966a4.547 4.547 0 1 0 0-9.095a4.547 4.547 0 0 0 0 9.094Zm16.823-17.041a4.536 4.536 0 1 0 0-9.072a4.536 4.536 0 0 0 0 9.072Zm39.323 5.526a4.7 4.7 0 1 0 0-9.399a4.7 4.7 0 0 0 0 9.399Zm48.649 29.541a4.45 4.45 0 1 0 0-8.898a4.45 4.45 0 0 0 0 8.898ZM120.458 17.405a2.54 2.54 0 1 0 0-5.08a2.54 2.54 0 0 0 0 5.08Z" />
+                  <path
+                    d="M161.022 44.369a4.266 4.266 0 1 0 0-8.531a4.266 4.266 0 0 0 0 8.531Zm-5.707-8.193a3.443 3.443 0 1 0 0-6.886a3.443 3.443 0 0 0 0 6.886Zm-17.302-7.496a4.418 4.418 0 1 0 0-8.836a4.418 4.418 0 0 0 0 8.836ZM89.282 46.695a4.952 4.952 0 1 0 0-9.905a4.952 4.952 0 0 0 0 9.905Zm-30.553-7.292a2.697 2.697 0 1 0 0-5.394a2.697 2.697 0 0 0 0 5.394Zm12.821-1.809a3.496 3.496 0 1 0 0-6.992a3.496 3.496 0 0 0 0 6.992Zm117.466 21.181a4.31 4.31 0 1 0 0-8.619a4.31 4.31 0 0 0 0 8.619ZM141.738 36.06a2.393 2.393 0 1 0 0-4.786a2.393 2.393 0 0 0 0 4.786Zm-50.814.482a4.539 4.539 0 1 0 0-9.078a4.539 4.539 0 0 0 0 9.078ZM24.326 92.178a3.946 3.946 0 1 0 0-7.892a3.946 3.946 0 0 0 0 7.892Zm10.512 1.362a4.585 4.585 0 1 0 0-9.17a4.585 4.585 0 0 0 0 9.17Zm37.049-40.42a4.412 4.412 0 1 0 0-8.824a4.412 4.412 0 0 0 0 8.825ZM25.623 82.356a3.42 3.42 0 1 0 0-6.84a3.42 3.42 0 0 0 0 6.84Zm137.891-49.643a3.742 3.742 0 1 0 0-7.485a3.742 3.742 0 0 0 0 7.485ZM59.334 48.427a3.405 3.405 0 1 0 0-6.811a3.405 3.405 0 0 0 0 6.81Z" />
+                  <path
+                    d="M42.825 89.445a4.776 4.776 0 1 0 0-9.553a4.776 4.776 0 0 0 0 9.553Zm155.259-32.502a4.68 4.68 0 1 0 0-9.359a4.68 4.68 0 0 0 0 9.36Zm16.871-.557a3.219 3.219 0 1 0 0-6.437a3.219 3.219 0 0 0 0 6.437ZM103.689 48.42a3.585 3.585 0 1 0 0-7.17a3.585 3.585 0 0 0 0 7.17Zm78.693-4.03a3.003 3.003 0 1 0 0-6.005a3.003 3.003 0 0 0 0 6.005Zm-1.29-7.523a4.897 4.897 0 1 0 0-9.794a4.897 4.897 0 0 0 0 9.794Zm-60.374 8.346a4.378 4.378 0 1 0 0-8.757a4.378 4.378 0 0 0 0 8.757Zm92.517 21.163a3.756 3.756 0 1 0 0-7.512a3.756 3.756 0 0 0 0 7.512ZM33.938 100.288a2.203 2.203 0 1 0 0-4.406a2.203 2.203 0 0 0 0 4.406Zm46.295-61.082a4.113 4.113 0 1 0 0-8.226a4.113 4.113 0 0 0 0 8.226Zm30.02-6.706a2.938 2.938 0 1 0 0-5.876a2.938 2.938 0 0 0 0 5.876Zm85.254 9.046a3.696 3.696 0 1 0 0-7.393a3.696 3.696 0 0 0 0 7.393Zm-93.464-14.978a4.596 4.596 0 1 0 0-9.193a4.596 4.596 0 0 0 0 9.193Z" />
+                  <path
+                    d="M174.151 30.958a4.25 4.25 0 1 0 0-8.501a4.25 4.25 0 0 0 0 8.5Zm-92.824-4.532a3.405 3.405 0 1 0 0-6.81a3.405 3.405 0 0 0 0 6.81Zm8.176-2.632a3.756 3.756 0 1 0 0-7.513a3.756 3.756 0 0 0 0 7.513Zm57.896-4.708a4.407 4.407 0 1 0 0-8.814a4.407 4.407 0 0 0 0 8.814Zm-17.707.934a3.43 3.43 0 1 0 0-6.86a3.43 3.43 0 0 0 0 6.86Zm26.508 4.186a2.623 2.623 0 1 0 0-5.246a2.623 2.623 0 0 0 0 5.246Z" />
+                  <path
+                    d="M147.442 28.232a4.864 4.864 0 1 0 0-9.727a4.864 4.864 0 0 0 0 9.727Zm19.303-4.719a3.361 3.361 0 1 0 0-6.723a3.361 3.361 0 0 0 0 6.723ZM15.926 105.501a4.222 4.222 0 1 0 0-8.444a4.222 4.222 0 0 0 0 8.444Zm95.796-82.278a2.273 2.273 0 1 0 0-4.546a2.273 2.273 0 0 0 0 4.546ZM189.81 33.63a2.743 2.743 0 1 0 0-5.487a2.743 2.743 0 0 0 0 5.486Zm-51.268-13.723a3.967 3.967 0 1 0 0-7.934a3.967 3.967 0 0 0 0 7.934ZM47.95 80.147a4.57 4.57 0 1 0 0-9.142a4.57 4.57 0 0 0 0 9.142Z" />
+                </g>
+              </svg>
+              Seaborn
+            </span>
+            <span class="skill-tag">
+              <svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M 63.992579,72.521325 41.553732,60.660321 2.6034211,40.074058 c -0.035557,-0.03555 -0.1066637,-0.03555 -0.1422174,-0.03555 -1.4221913,-0.675528 -2.87993927,0.746641 -2.3466152,2.168863 l 19.8466965,50.619383 0.0035,0.0109 c 0.02134,0.04994 0.03912,0.09944 0.06046,0.149334 0.814189,1.887956 2.591938,3.054 4.526143,3.512657 0.163538,0.03587 0.280527,0.06782 0.476917,0.107073 0.195451,0.04351 0.46881,0.10282 0.703471,0.120745 0.03912,0.0033 0.07467,0.0033 0.113789,0.0065 h 0.02846 c 0.02841,0.0044 0.05687,0.0044 0.08533,0.0076 h 0.03908 c 0.02491,0.0033 0.05333,0.0033 0.07824,0.0033 h 0.04621 c 0.02846,0.0044 0.05687,0.0044 0.08533,0.0044 v 0 c 25.135232,2.740415 50.493562,2.740415 75.628755,0 v 0 c 0.30207,0 0.59732,-0.0145 0.88147,-0.04263 0.0926,-0.0109 0.18133,-0.02137 0.27051,-0.03195 0.0107,-0.0044 0.0247,-0.0044 0.0354,-0.0076 0.0606,-0.0076 0.12074,-0.01788 0.18133,-0.02857 0.0887,-0.0109 0.17791,-0.02813 0.26666,-0.04612 0.17791,-0.03925 0.25855,-0.06738 0.50004,-0.1506 0.24106,-0.08276 0.64169,-0.22784 0.89214,-0.348585 0.25087,-0.120746 0.42452,-0.236792 0.63444,-0.368201 0.2594,-0.163837 0.50644,-0.331086 0.75689,-0.518812 0.10794,-0.08276 0.18175,-0.135683 0.25983,-0.210351 l -0.0427,-0.02475 z"
+                  fill="#ff4b4b" />
+                <path
+                  d="m 125.44606,40.07457 h -0.0354 L 86.445785,60.660834 108.10586,92.919776 127.90272,42.207855 v -0.07109 c 0.49791,-1.493346 -1.0308,-2.844391 -2.45668,-2.062205"
+                  fill="#7d353b" />
+                <path
+                  d="m 66.069117,30.286053 c -0.995816,-1.454191 -3.164512,-1.454191 -4.124488,0 L 41.553817,60.660572 63.992579,72.521761 106.51616,94.995458 c 0.26709,-0.261532 0.48127,-0.516249 0.7074,-0.785468 0.31999,-0.394664 0.61865,-0.817481 0.8819,-1.290639 L 86.445379,60.660572 Z"
+                  fill="#bd4043" />
+              </svg>
+              Streamlit
+            </span>
+            <span class="skill-tag">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+                <path fill="#e15919"
+                  d="M57.646.004c-2.269.064-4.51 1.143-6.384 3.223-1.03 1.146-1.905 2.51-2.63 3.855-1.89 3.54-2.262 7.547-2.962 11.43l-3.852 21.81c-.148.856-.532 1.21-1.3 1.455l-28.268 8.98c-2.06.673-4.125 1.543-5.947 2.7-5.558 3.53-6.38 9.338-2.207 14.438 1.842 2.256 4.216 3.843 6.85 4.996l17.603 7.843c.147.08.304.132.463.162l3.717 2.682s-3.7 40.948 3.246 43.781c-.061-.01-.41-.082-.41-.082s.704.761 2.603.537c1.454.27 1.262.226.074-.01 2.583-.334 7.337-2.497 15.578-10.784a47.396 47.396 0 0 0 1.776-1.676l17.8-19.217 4.163 1.465c.15.207.367.34.714.443l19.823 6.031c2.709.836 5.389 1.448 8.277 1.026 5.156-.755 8.951-5 8.9-10.192-.02-2.28-.82-4.339-1.87-6.324l-13.128-24.898c-.418-.787-.405-1.296.196-2l22.054-25.922c1.428-1.703 2.717-3.529 3.465-5.645 1.643-4.67-.482-8.382-5.33-9.289-2.229-.398-4.427-.188-6.6.385l-31.597 8.395c-.93.25-1.39.075-1.895-.772l-12.9-21.434c-.975-1.615-2.14-3.194-3.477-4.527C62.212.89 59.915-.059 57.646.004zm.944 19.736c.51.358.768.727 1.01 1.125l13.88 23.13c.382.628.725.85 1.485.648l24.443-6.497 5.885-1.54c-.087.493-.302.79-.537 1.068l-20.16 23.672c-.57.688-.623 1.17-.194 1.976l12.743 24.16.585 1.237-.015.02-22.727-6.264-.006-.018-4.298-1.205-25.493 28.256 4.663-37.15-4.184-1.82.008-.007-23.674-9.4c.454-.413.86-.585 1.285-.717l28.777-9.096c.676-.21 1.061-.47 1.125-1.242l.403-2.355 3.875-21.807 1.12-6.174z" />
+              </svg>
+              PySpark
+            </span>
+            <span class="skill-tag">
+              <svg version="1.1" viewBox="0 0 6.3499999 6.3499999" height="6.3499999mm" width="6.3499999mm"
+                xmlns="http://www.w3.org/2000/svg">
+                <path style="fill:currentColor;fill-opacity:0.98;stroke:none;"
+                  d="M 3.175 0.53433431 A 2.6405416 2.6320024 0 0 0 0.53433431 3.166215 A 2.6405416 2.6320024 0 0 0 3.175 5.7986125 A 2.6405416 2.6320024 0 0 0 5.8156657 3.166215 A 2.6405416 2.6320024 0 0 0 3.175 0.53433431 z M 2.9925822 1.7259928 L 4.6539795 1.7259928 L 2.9858643 2.8985311 L 4.1263631 2.8985311 L 1.6960205 4.6064372 L 2.2236369 3.4344157 L 2.4649658 2.8985311 L 2.9925822 1.7259928 z " />
+              </svg>
+              FastAPI
+            </span>
+            <span class="skill-tag">
+              <svg fill="currentColor" width="800px" height="800px" viewBox="0 0 32 32" version="1.1"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M14.319 9.028c0.35-0.62-1.443-0.835-0.235-0.219 0.112 0.037 0.087 0.262 0.235 0.219zM4.542 3.761c-0.762-0.995 1.432 0.167 0.659-0.875-0.652-0.519-1.278 0.585-0.659 0.875zM6.138 5.011c1.082-0.144-0.275-0.466-0.217-0.013zM5.283 4.806c0.232-0.315-0.407 0.16 0 0zM7.008 6.705c0.672 0.016-0.289-0.902 0.511-0.487-0.131-0.429-0.932-0.509-1.325-0.68-0.22 0.392 0.45 1.172 0.812 1.167zM4.916 6.619c0.575-0.434 1.984 0.257 1.080-0.431-0.087-0.077-1.982 0.522-1.080 0.431zM4.326 7.747c1.007-0.342 2.383-0.726 2.858 0.169-0.484-0.582-0.195-1.155 0.262-0.304 0.645 0.861 0.968-0.391 0.547-0.681 0.479 0.595 1.023 0.875 0.321 0.037 0.762-0.917-1.528 0.121-2.049 0.11-0.25 0.112-2.588 0.596-1.938 0.669zM6.2 10.881c0.246-0.304-0.337-0.081 0 0zM5.613 12.452c-0.060-0.362-0.175 0.192 0 0zM5.116 12.2c0.562-0.037 0.882-0.621-0.109-0.587-1.537-0.159 1.355 0.525-0.197 0.33-0.209 0.137 0.295 0.296 0.306 0.259zM29.116 27.445c0.696 0 2.109-0.216 0.594-0.216-0.237 0.038-1.386 0.030-0.595 0.216zM25.78 25.486c0.075-0.51-0.337 0.046 0 0zM28.395 27.273c0.015-0.444-0.38 0.2 0 0zM2.65 11.165c0.499-0.381-0.589-0.145 0 0zM4.549 12.515c0.306-0.325-0.663-0.132 0 0zM3.906 12.335c0.871-0.534-0.926-0.462 0 0zM10.348 8.28c0.291-0.765 1.132-0.306 0.135-0.154 0.021 0.081-0.030 0.395-0.135 0.154zM9.548 8.285c-0.069-1.517 1.398 0.54-0 0zM6.736 8.718c0.462-0.555 2.618-0.354 1.040-0.054-0.422-0.319-0.747 0.187-1.040 0.054zM6.541 8.848c0.277-0.325 0.080 0.287-0 0zM5.782 9.154c0.040-0.514 1.272 0.272 0.204 0.185zM5.226 9.144c0.437-0.325 0.232 0.182-0 0zM5.167 9.687c0.304-1.117 1.625 0.918 0.497 0.147-0.121-0.095-0.275-0.152-0.443-0.152-0.019 0-0.038 0.001-0.057 0.002l0.002-0zM2.050 11.274c-0.116-0.669-0.1-1.842 1.015-1.445-1.488 0.295 1.030 1.849 0.712 0.622 0.625 0.030 1.225-0.37 0.895 0.237 1.233-0.137 2.087-1.205 3.279-1.056 1.082-0.090 2.082-0.299 3.033-0.615l-0.091 0.026c0.822-0.060 1.612-0.945 1.162-1.468-0.218-0.013-0.473-0.021-0.73-0.021-0.993 0-1.96 0.114-2.888 0.329l0.086-0.017c-1.372 0.285-2.619 0.827-4.005 1.061-1.35 0.181 0.271 0.5-0.115 0.57-0.705 0.245 0.84 0.41-0.091 0.667-0.575-0.11-1.175-0.307-0.928-0.912-1.293 0.166-2.431 0.704-1.408 2.019h0.075zM4.22 12.726c0.069-0.475-0.512 0.094-0 0zM26.941 27.412c0.165-0.49-0.417 0.062 0 0zM24.474 26.133c0.412-0.379-0.525-0.117 0 0zM4.062 13.526c0.647-0.254-1.175-0.525-0.13-0.050zM2.538 12.615c-0.044-0.4-0.237 0.050 0 0zM2.263 12.823c-0.025-0.337-0.18 0.127 0 0zM4.12 14.028c-0.087-0.731-1.050-0.11 0-0zM7.719 16.687c0.152-0.14-0.362-0.104 0 0zM4.463 14.6c-0.15-0.121-0.117 0.152 0 0zM3.946 14.347c0.011-0.312-0.829-0.28 0 0zM3.041 14.119c-0.172-0.968-0.656-0.147-0 0zM6.836 16.754c0.011-0.509-0.396-0.019 0 0zM23.985 27.436c0.64-0.13 2.097 0.325 2.332-0.17-0.775-0.019-2.687-0.547-2.777 0.125l0.17 0.029zM6.378 16.639c-0.009-0.166-0.152 0.062 0 0zM4.933 15.939c0.499-0.169-0.459-0.112 0 0zM16.467 23.725c-0.009-0.501-0.494 0.125 0 0zM5.241 16.65c0.775-0.3-0.83-0.212 0 0zM20.249 26.297c0.27-0.2-0.337-0.025 0 0zM17.435 24.523c-0.050-0.194-0.196 0.037 0 0zM17.093 24.274c-0.135-0.347-0.535-0.008 0 0zM9.994 19.796c0-0.506-0.906-0.205 0 0zM9.174 19.606c-0.332-0.279-0.016-0.040 0 0zM3.771 16.275c0.115-0.479-1.066-2.633-0.557-1.080 0.182 0.325 0.162 0.942 0.557 1.080zM6.715 18.599c0.646 0.145 2.582 1.592 1.44 0.1-0.585-0.172-0.234-1.603-0.831-1.35 0.4 0.669 0.33 0.953-0.512 0.532-1.056-0.516-0.592 0.255-0.387 0.467-0.28 0.065 0.374 0.245 0.291 0.25zM22.891 29.012c0.482-0.322-0.586-0.104 0 0zM21.166 27.865c0.717-0.602-0.759 0.266-0 0zM21.503 28.028c0.881-0.637-0.535-0.122-0.185 0.12zM11.639 22.174c-0.181-0.371-0.28 0.059 0 0zM11.064 21.841c-0.025-0.3-0.364 0.025 0 0zM20.399 27.727c0.689-0.444-0.157-0.375-0.125 0.040zM6.272 18.818c0.204-0.302-0.525-0.039 0 0zM20.625 28.018c0.712-0.61-0.45-0.128 0-0zM19.543 27.593c1.418-0.917-0.582-0.4 0-0zM4.51 18.178c-0.657-0.937-0.409-1.36-1.043-2.124-0.12-0.587-1.087-1.916-0.5-0.507 0.537 0.823 0.697 2.098 1.543 2.632zM19.784 27.853c0.771-0.817-0.747 0.049 0 0zM19.783 28.115c0.004-0.187-0.3 0.082-0 0zM18.333 27.121c0.697-0.585-0.675 0.26-0 0zM11.964 23.185c0.452 0.4 2.077 0.295 0.55 0.050-0.227-0.337-1.438-0.255-0.55-0.050zM7.327 20.39c-0.302-0.502-1.080-0.455 0 0zM6.513 19.855c-0.125-0.491-0.875-0.487 0-0zM18.624 27.462c0.406-0.394 0.016 0.629 0.675-0.096 0.006-0.519-0.021-0.825-0.757-0.195-0.202 0.112-0.292 0.591 0.082 0.291zM17.861 27.141c0.025-0.35-0.241 0.3 0-0zM10.438 22.644c1.762 0.567-0.864-0.695 0-0zM8.988 21.811c0.425 0.316 1.6 0.898 0.605 0.12 0.336-0.39-0.642-0.597-0.317-0.857-0.825-0.505-0.65-0.46-0.072-0.445-0.992-0.442 0.142-0.41 0.087-0.637-0.381-0.075-1.899-0.675-1.005 0.050-0.907-0.462-0.216 0.172-0.49 0.105-0.928-0.252 0.825 0.706-0.147 0.469 0.531 0.421 1.432 1.080 0.225 0.446-0.16 0.229 0.862 0.575 1.115 0.75zM11.726 23.628c0.769 0.2 0.765-0.119 0.069-0.212-0.375-0.35-1.557-0.719-0.5-0.044 0.071 0.177 0.294 0.174 0.43 0.257zM10.339 22.928c-0.16-0.139 0.020 0.087-0-0zM11.013 9.666c0.117-0.144 0.025 0.174-0-0zM10.61 12.069c-0.27-0.475 0.34-2.091 0.407-1.087-0.284 0.781-0.081 1.218 0.116 0.17 0.366-0.825-0.079 1.628-0.525 0.918zM10.218 12.706c-0.066-0.4 0.225 0.505 0 0zM10.459 13.343c-0.393-0.97 0.365 0.512-0-0zM10.623 13.706c-0.003-0.209 0.054 0.302-0-0zM7.795 12.132c0.257-0.542 0.475 0.604-0-0zM6.793 11.535c0.161-0.069 0.085 0.215-0-0zM11.076 14.879c0.146-1.18 0.129 0.691-0-0zM7.234 12.625c0.211-0.31-0.562-1.4 0.111-0.391 0.29 0.231 0.84 0.387 0.354 0.484 0.762 0.674-0.187 0.182-0.465-0.092zM11.296 15.203c0.055-1.037 0.31-0.619 0.002 0.147zM6.848 12.985c0.519-0.11 2.147 0.911 0.65 0.292-0.165-0.185-0.52-0.1-0.65-0.293zM11.586 16.261c0.162-0.577 0.012 0.381 0 0zM9.484 14.913c-0.082-1.012 0.184 0.167 0 0zM6.715 13.444c-0.871-1.203 2.533 1.216 0.559 0.305-0.206-0.054-0.455-0.075-0.559-0.305zM11.521 16.702c0.067-0.275 0.009 0.322 0 0zM11.771 16.95c0.060-0.641 0.124 0.437-0-0zM10.334 16.1c-0.587-0.352-0.154-2.479 0.046-1.025 0.571-0.185-0.031 0.75 0.394 0.742-0.066 0.591-0.257 0.804-0.437 0.282zM6.448 13.841c-1.357-1.207 1.706 0.632 0.221 0.225zM7.319 14.674c-0.41-0.771 0.5 0.322 0 0zM6.881 14.533c0.271-0.269 0.144 0.265 0 0zM6.169 14.552c-0.467-0.462-0.805-0.891 0.021-0.287 0.319 0.012-0.707-0.972 0.075-0.312 0.825 0.15 0.409 1.352-0.096 0.6zM7.524 15.601c0.27-0.569 0.457 0.792 0 0zM6.961 15.408c0.050-0.754 0.287 0.516 0 0zM8.215 16.271c-0.262-0.448-0.417-0.987-0.417-1.562 0-0.001 0-0.002 0-0.003v0c0.095 0.472 1.005 2.033 0.446 0.647-0.617-1.162 0.737 0.377 0.877 0.667 0.062 0.287-0.381-0.079-0.080 0.597-0.55-0.771-0.325 0.425-0.826-0.347zM12.271 18.977c-0.44-0.987 0.312-0.54 0.097 0.162zM9.919 18.222c-0.194-0.347 0.404 0.325 0 0zM12.658 20.128c0.168-0.63 0.198 0.53 0 0zM8.78 18.026c0.274-0.075 0.135 0.467 0 0zM13.653 21.39c-0.465-0.9 0.587 0.255 0 0zM14.056 21.931c-0.012-0.585 0.134 0.45 0 0zM18.687 25.45c0.231-0.014 0.008 0.175 0 0zM14.64 22.879c-0.37-0.387-0.466-1.112-0.066-0.481 0.205 0.082 0.656 1.183 0.066 0.481zM15.883 26.388c0.966-0.577 0.647 1.352 1.638 0.162 0.977-0.712-0.843 0.883 0.362 0.129 0.87-0.584 2.157 0.275 2.969 0.556 0.585-0.029 1.153 0.506 1.753 0.181 1.153-0.312-2.257-0.462-1.362-1.012-0.138 0.031-0.297 0.049-0.46 0.049-0.805 0-1.509-0.435-1.89-1.082l-0.006-0.010c-1.299-0.215-2.402-0.92-3.136-1.914l-0.009-0.013c-0.24-0.394 0.35 0.055-0.207-0.587-0.606-0.61-1.123-1.311-1.527-2.079l-0.023-0.047c-0.571-0.305-0.637-1.203-0.696-0.030 0.005-0.741-0.691-1.24-0.86-1.032-0.002-0.714 0.744-0.356 0.22-0.884-0.112-0.74-0.482-1.512-0.594-2.346-0.172-0.402-0.025-1.263-0.591-0.352-0.206 0.962-0.069-1.183 0.252-0.475 0.421-0.725-0.15-0.637-0.175-0.537 0.275-0.61 0.175-1.475-0.071-1.145 0.146-0.646 0.231-2.377-0.219-2.069 0.272-0.675 0.517-3.090-0.667-2.169-0.62 0.025-1.202 0.159-1.736 0.382l0.033-0.012c1.232 0.679-0.125 0.245-0.625 0.137-0.065 0.627-0.562 0.356-1.182 0.362 0.991 0.122-0.482 1.012-1.051 0.667-0.737 0.352 0.637 1.233 0.015 1.506 0.075 0.41-1.131-0.15-1.037 0.8-0.716-0.301-0.097 1.125 0.261 0.642 1.218 0.33 0.857 1.082 0.887 1.796-0.197 0.416-0.98-0.978-0.175-0.914-0.634-1.033-0.701-0.375-1.23 0.106-0.125 0.035 1.348 0.684 0.425 1.003 0.812 0.125 0.835 0.837 1 1.287 0.487 0.509 0.387-0.562 0.973 0.050-0.37-0.545-1.958-1.535-0.68-1.217-0.006-0.55-0.231-0.991 0.161-0.98 0.387-0.702-0.406 1.733 0.469 0.84 0.241-0.106 0.3-0.704 0.737 0.056 0.631 0.622 0.227 1.072-0.664 0.504 0.159 0.541 1.192 0.734 0.998 1.581 0.206 0.744 0.494 0.47 0.745 0.427 0.197 0.722 0.309 0.191 0.319-0.154 0.9 0.194 0.69 0.725 0.972 1.1 0.621 0.28-0.89-1.902 0.177-0.657 1.122 1.012 0.421 1.437-0.587 1.275 0.637-0.051 0.844 0.862 1.641 0.83 0.727 0.346 1.218 1.675-0.034 1.121-0.435-0.391-1.974-0.875-0.716-0.13 1.282 0.525 2.335 1.039 3.35 1.611l-0.15-0.077c0.8 0.572 1.147 1.227 1.45 1.357-0.672 0.321-2.028-0.257-1.021-0.435-0.629-0.114-1.335-0.431-0.734 0.35 0.512 0.429 1.812 0.382 2.046 0.431-0.199 0.435-0.537 0.47 0.008 0.504-0.607 0.325 0.195 0.375 0.251 0.56zM12.289 24.179c1.033 0.132-1.231-0.704-0.226-0.075zM15.045 26.050c0.897-0.356-0.875-0.175 0 0zM9.746 22.754c0.575-0.062-0.925-0.389 0 0zM12.877 24.744c0.075-0.319-0.66-0.096 0 0zM17.456 27.709c-0.012-0.246-0.229 0.094 0 0zM13.25 25.129c-0.142-0.162-0.068 0.035 0 0zM6.493 20.836c-0.096-0.371-0.842-0.667 0 0zM9.067 22.501c0.775-0.046-1.060-0.341 0 0zM11.239 24.068c-0.080-0.239-0.42-0.010 0 0zM17.025 27.637c0.035-0.454-0.441 0.337 0 0zM8.94 22.657c-0.052-0.25-0.332 0.023 0 0zM14.743 26.356c1.35 0.012-1.218-0.184 0 0zM12.277 24.931c1.425 0.404-1.197-0.9-0.351-0.147l0.187 0.085 0.162 0.062zM13.507 25.91c0.241-0.412-1.018-0.237 0 0zM9.458 23.438c0.582 0.447 2.349 0.057 0.892-0.266-0.662-0.354-2.158-0.595-1.14 0.212zM12.687 25.653c0.537-0.202-0.87-0.204 0 0zM11.48 24.912c0.375-0.262-0.776-0.2 0 0zM10.043 24.075c-0.050-0.209-0.77-0.231 0 0zM14.943 27.892c0.496 0.312 2.899 0.687 1.393 0.129-0.25 0.052-2.787-0.717-1.395-0.129zM11.856 25.965c-0.017-0.207-0.22 0.094 0 0zM11.239 25.657c0.609-0.394-0.787-0.005 0 0zM13.947 27.548c0.239-0.352-0.762-0.134 0 0z" />
+              </svg>
+              Flask
+            </span>
+          </div>
+        </div>
+
+        <div class="skill-category reveal reveal-delay-3">
+          <div class="skill-category-header">
+            <div class="skill-category-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M4 6c0 1.657 3.582 3 8 3s8 -1.343 8 -3s-3.582 -3 -8 -3s-8 1.343 -8 3" />
+                <path d="M4 6v6c0 1.657 3.582 3 8 3s8 -1.343 8 -3v-6" />
+                <path d="M4 12v6c0 1.657 3.582 3 8 3s8 -1.343 8 -3v-6" />
+              </svg>
+            </div>
+            <h3>Databases</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">
+              <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" viewBox="0 0 256 252">
+                <path fill="currentColor"
+                  d="M236 194c-14 0-25 1-34 5-3 1-7 1-7 4l3 6c2 3 5 8 9 11l11 8 21 10 11 9 6 4-3-6-5-5c-5-7-11-13-18-18-6-3-18-9-20-15h-1l12-3 18-3 8-2v-2l-9-10c-8-8-18-15-28-22l-18-8c-2-1-6-2-7-4l-7-13-15-30-8-20c-18-30-38-48-68-65-6-4-14-5-22-7l-13-1-8-6C34 5 8-9 1 9c-5 11 7 22 11 28l9 13 3 9c3 8 5 17 9 24l6 10c2 2 4 3 5 6-3 4-3 9-4 13-7 20-4 44 5 59 2 4 9 14 18 10 8-3 6-13 8-22l1-4 8 14c5 9 14 18 22 24 4 3 8 8 13 10l-4-4-9-10c-8-10-14-21-20-32l-7-17-3-6c-3 4-7 7-9 12-3 7-3 17-4 26h-1c-6-1-8-7-10-12-5-12-6-32-1-46 1-4 6-15 4-19-1-3-4-5-6-7l-7-12-10-30-9-13c-3-5-7-8-10-14-1-2-2-5 0-7l2-2c2-2 9 0 11 1 6 3 12 5 17 9l8 6h4c6 1 12 0 17 2 9 3 18 7 25 12 23 14 42 35 54 59 3 4 3 8 5 12l12 26c4 8 7 16 12 23 3 4 14 6 18 8l12 4 18 12c2 2 11 7 12 10Z" />
+                <path fill="currentColor" d="m58 43-7 1 6 7 4 9v-1c3-1 4-4 4-8l-2-4-5-4Z" />
+              </svg>
+              MySQL
+            </span>
+            <span class="skill-tag">
+              <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 432.071 445.383">
+                <g
+                  style="fill-rule:nonzero;clip-rule:nonzero;fill:none;stroke:#fff;stroke-width:12.4651;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4">
+                  <path
+                    d="M323.205 324.227c2.833-23.601 1.984-27.062 19.563-23.239l4.463.392c13.517.615 31.199-2.174 41.587-7 22.362-10.376 35.622-27.7 13.572-23.148-50.297 10.376-53.755-6.655-53.755-6.655 53.111-78.803 75.313-178.836 56.149-203.322-52.27-66.789-142.748-35.206-144.262-34.386l-.482.089c-9.938-2.062-21.06-3.294-33.554-3.496-22.761-.374-40.032 5.967-53.133 15.904 0 0-161.408-66.498-153.899 83.628 1.597 31.936 45.777 241.655 98.47 178.31 19.259-23.163 37.871-42.748 37.871-42.748 9.242 6.14 20.307 9.272 31.912 8.147l.897-.765c-.281 2.876-.157 5.689.359 9.019-13.572 15.167-9.584 17.83-36.723 23.416-27.457 5.659-11.326 15.734-.797 18.367 12.768 3.193 42.305 7.716 62.268-20.224l-.795 3.188c5.325 4.26 4.965 30.619 5.72 49.452.756 18.834 2.017 36.409 5.856 46.771 3.839 10.36 8.369 37.05 44.036 29.406 29.809-6.388 52.6-15.582 54.677-101.107"
+                    style="fill:#000;stroke:#000;stroke-width:37.3953;stroke-linecap:butt;stroke-linejoin:miter" />
+                  <path stroke="none"
+                    d="M402.395 271.23c-50.302 10.376-53.76-6.655-53.76-6.655 53.111-78.808 75.313-178.843 56.153-203.326-52.27-66.785-142.752-35.2-144.262-34.38l-.486.087c-9.938-2.063-21.06-3.292-33.56-3.496-22.761-.373-40.026 5.967-53.127 15.902 0 0-161.411-66.495-153.904 83.63 1.597 31.938 45.776 241.657 98.471 178.312 19.26-23.163 37.869-42.748 37.869-42.748 9.243 6.14 20.308 9.272 31.908 8.147l.901-.765c-.28 2.876-.152 5.689.361 9.019-13.575 15.167-9.586 17.83-36.723 23.416-27.459 5.659-11.328 15.734-.796 18.367 12.768 3.193 42.307 7.716 62.266-20.224l-.796 3.188c5.319 4.26 9.054 27.711 8.428 48.969-.626 21.259-1.044 35.854 3.147 47.254 4.191 11.4 8.368 37.05 44.042 29.406 29.809-6.388 45.256-22.942 47.405-50.555 1.525-19.631 4.976-16.729 5.194-34.28l2.768-8.309c3.192-26.611.507-35.196 18.872-31.203l4.463.392c13.517.615 31.208-2.174 41.591-7 22.358-10.376 35.618-27.7 13.573-23.148z"
+                    style="fill:#336791;stroke:none" />
+                </g>
+              </svg>
+              PostgreSQL
+            </span>
+            <span class="skill-tag">
+              <svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" fill="none" viewBox="0 0 600 600">
+                <path fill="#FF9100"
+                  d="M213.918 560.499c23.248 9.357 48.469 14.909 74.952 15.834 35.84 1.252 69.922-6.158 100.391-20.234-36.537-14.355-69.627-35.348-97.869-61.448-18.306 29.31-45.382 52.462-77.474 65.848Z" />
+                <path fill="#FFC400"
+                  d="M291.389 494.66c-64.466-59.622-103.574-145.917-100.269-240.568.108-3.073.27-6.145.46-9.216a166.993 166.993 0 0 0-36.004-5.241 167.001 167.001 0 0 0-51.183 6.153c-17.21 30.145-27.594 64.733-28.888 101.781-3.339 95.611 54.522 179.154 138.409 212.939 32.093-13.387 59.168-36.51 77.475-65.848Z" />
+                <path fill="#FF9100"
+                  d="M291.39 494.657c14.988-23.986 24.075-52.106 25.133-82.403 2.783-79.695-50.792-148.251-124.942-167.381-.19 3.071-.352 6.143-.46 9.216-3.305 94.651 35.803 180.946 100.269 240.568Z" />
+                <path fill="#DD2C00"
+                  d="M308.231 20.858C266 54.691 232.652 99.302 212.475 150.693c-11.551 29.436-18.81 61.055-20.929 94.2 74.15 19.13 127.726 87.686 124.943 167.38-1.058 30.297-10.172 58.39-25.134 82.404 28.24 26.127 61.331 47.093 97.868 61.447 73.337-33.9 125.37-106.846 128.383-193.127 1.952-55.901-19.526-105.724-49.875-147.778-32.051-44.477-159.5-194.36-159.5-194.36Z" />
+              </svg>
+              Firebase
+            </span>
+            <span class="skill-tag">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 120 257">
+                <path fill="#00ED64"
+                  d="M82.323 28.55C71.537 15.795 62.249 2.84 60.35.15c-.2-.2-.5-.2-.7 0-1.897 2.69-11.185 15.645-21.971 28.4C-54.902 146.238 52.26 225.661 52.26 225.661l.9.597c.798 12.258 2.795 29.896 2.795 29.896h7.99s1.998-17.539 2.797-29.896l.899-.697c.1 0 107.263-79.323 14.68-197.01ZM59.95 223.867s-4.793-4.086-6.092-6.179v-.199l5.793-128.151c0-.4.6-.4.6 0l5.792 128.151v.199c-1.299 2.093-6.093 6.179-6.093 6.179Z" />
+              </svg>
+              MongoDB
+            </span>
+            <span class="skill-tag">
+              <svg width="800px" height="800px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <g data-name="Product Icons">
+                  <g>
+                    <path style="fill:#aecbfa;fill-rule:evenodd;"
+                      d="M6.73,10.83v2.63A4.91,4.91,0,0,0,8.44,15.2V10.83Z" />
+                    <path style="fill:#669df6;fill-rule:evenodd;"
+                      d="M9.89,8.41v7.53A7.62,7.62,0,0,0,11,16,8,8,0,0,0,12,16V8.41Z" />
+                    <path style="fill:#aecbfa;fill-rule:evenodd;" d="M13.64,11.86v3.29a5,5,0,0,0,1.7-1.82V11.86Z" />
+                    <path style="fill:#4285f4;fill-rule:evenodd;"
+                      d="M17.74,16.32l-1.42,1.42a.42.42,0,0,0,0,.6l3.54,3.54a.42.42,0,0,0,.59,0l1.43-1.43a.42.42,0,0,0,0-.59l-3.54-3.54a.42.42,0,0,0-.6,0" />
+                    <path style="fill:#669df6;fill-rule:evenodd;"
+                      d="M11,2a9,9,0,1,0,9,9,9,9,0,0,0-9-9m0,15.69A6.68,6.68,0,1,1,17.69,11,6.68,6.68,0,0,1,11,17.69" />
+                  </g>
+                </g>
+              </svg>
+              BigQuery
+            </span>
+          </div>
+        </div>
+
+        <div class="skill-category reveal reveal-delay-1">
+          <div class="skill-category-header">
+            <div class="skill-category-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path
+                  d="M6.657 18c-2.572 0 -4.657 -2.007 -4.657 -4.483c0 -2.475 2.085 -4.482 4.657 -4.482c.393 -1.762 1.794 -3.2 3.675 -3.773c1.88 -.572 3.956 -.193 5.344 1.045c1.4 .82 2.322 2.295 2.322 3.96c1.884 .227 3.333 1.845 3.333 3.765c0 2.074 -1.678 3.755 -3.75 3.75h-10.924z" />
+              </svg>
+            </div>
+            <h3>Platforms & Tools</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">
+              <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" x="0" y="0" viewBox="0 0 304 182">
+                <path fill="currentColor"
+                  d="m86 66 2 9c0 3 1 5 3 8v2l-1 3-7 4-2 1-3-1-4-5-3-6c-8 9-18 14-29 14-9 0-16-3-20-8-5-4-8-11-8-19s3-15 9-20c6-6 14-8 25-8a79 79 0 0 1 22 3v-7c0-8-2-13-5-16-3-4-8-5-16-5l-11 1a80 80 0 0 0-14 5h-2c-1 0-2-1-2-3v-5l1-3c0-1 1-2 3-2l12-5 16-2c12 0 20 3 26 8 5 6 8 14 8 25v32zM46 82l10-2c4-1 7-4 10-7l3-6 1-9v-4a84 84 0 0 0-19-2c-6 0-11 1-15 4-3 2-4 6-4 11s1 8 3 11c3 2 6 4 11 4zm80 10-4-1-2-3-23-78-1-4 2-2h10l4 1 2 4 17 66 15-66 2-4 4-1h8l4 1 2 4 16 67 17-67 2-4 4-1h9c2 0 3 1 3 2v2l-1 2-24 78-2 4-4 1h-9l-4-1-1-4-16-65-15 64-2 4-4 1h-9zm129 3a66 66 0 0 1-27-6l-3-3-1-2v-5c0-2 1-3 2-3h2l3 1a54 54 0 0 0 23 5c6 0 11-2 14-4 4-2 5-5 5-9l-2-7-10-5-15-5c-7-2-13-6-16-10a24 24 0 0 1 5-34l10-5a44 44 0 0 1 20-2 110 110 0 0 1 12 3l4 2 3 2 1 4v4c0 3-1 4-2 4l-4-2c-6-2-12-3-19-3-6 0-11 0-14 2s-4 5-4 9c0 3 1 5 3 7s5 4 11 6l14 4c7 3 12 6 15 10s5 9 5 14l-3 12-7 8c-3 3-7 5-11 6l-14 2z" />
+                <path d="M274 144A220 220 0 0 1 4 124c-4-3-1-6 2-4a300 300 0 0 0 263 16c5-2 10 4 5 8z" fill="#f90" />
+                <path
+                  d="M287 128c-4-5-28-3-38-1-4 0-4-3-1-5 19-13 50-9 53-5 4 5-1 36-18 51-3 2-6 1-5-2 5-10 13-33 9-38z"
+                  fill="#f90" />
+              </svg>
+              AWS
+            </span>
+            <span class="skill-tag">
+              <svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" preserveAspectRatio="xMidYMid"
+                viewBox="0 -25 256 256">
+                <path fill="#EA4335"
+                  d="m170.252 56.819 22.253-22.253 1.483-9.37C153.437-11.677 88.976-7.496 52.42 33.92 42.267 45.423 34.734 59.764 30.717 74.573l7.97-1.123 44.505-7.34 3.436-3.513c19.797-21.742 53.27-24.667 76.128-6.168l7.496.39Z" />
+                <path fill="#4285F4"
+                  d="M224.205 73.918a100.249 100.249 0 0 0-30.217-48.722l-31.232 31.232a55.515 55.515 0 0 1 20.379 44.037v5.544c15.35 0 27.797 12.445 27.797 27.796 0 15.352-12.446 27.485-27.797 27.485h-55.671l-5.466 5.934v33.34l5.466 5.231h55.67c39.93.311 72.553-31.494 72.864-71.424a72.303 72.303 0 0 0-31.793-60.453" />
+                <path fill="#34A853"
+                  d="M71.87 205.796h55.593V161.29H71.87a27.275 27.275 0 0 1-11.399-2.498l-7.887 2.42-22.409 22.253-1.952 7.574c12.567 9.489 27.9 14.825 43.647 14.757" />
+                <path fill="#FBBC05"
+                  d="M71.87 61.425C31.94 61.664-.237 94.228.001 134.159a72.301 72.301 0 0 0 28.222 56.88l32.248-32.246c-13.99-6.322-20.208-22.786-13.887-36.776 6.32-13.99 22.786-20.208 36.775-13.888a27.796 27.796 0 0 1 13.887 13.888l32.248-32.248A72.224 72.224 0 0 0 71.87 61.425" />
+              </svg>
+              GCP
+            </span>
+            <span class="skill-tag">
+              <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" viewBox="0 0 256 256">
+                <path
+                  d="M251.17 116.6 139.4 4.82a16.49 16.49 0 0 0-23.31 0l-23.21 23.2 29.44 29.45a19.57 19.57 0 0 1 24.8 24.96l28.37 28.38a19.61 19.61 0 1 1-11.75 11.06L137.28 95.4v69.64a19.62 19.62 0 1 1-16.13-.57V94.2a19.61 19.61 0 0 1-10.65-25.73L81.46 39.44 4.83 116.08a16.49 16.49 0 0 0 0 23.32L116.6 251.17a16.49 16.49 0 0 0 23.32 0l111.25-111.25a16.5 16.5 0 0 0 0-23.33"
+                  fill="#DE4C36" />
+              </svg>
+              Git
+            </span>
+            <span class="skill-tag">
+              <svg width="800px" height="800px" viewBox="0 0 1200 1600" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <mask id="pbi_mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="200" y="0" width="1000"
+                  height="1600">
+                  <path
+                    d="m 1333.25,0 c 36.86,0 66.75,29.8849 66.75,66.75 v 1466.5 c 0,36.86 -29.89,66.75 -66.75,66.75 H 266.667 C 229.848,1600 200,1570.15 200,1533.33 V 866.667 C 200,829.848 229.848,800 266.667,800 H 525 V 466.667 C 525,429.848 554.848,400 591.667,400 H 850 V 66.75 C 850,29.885 879.885,0 916.75,0 Z"
+                    fill="#ffffff" />
+                </mask>
+                <g mask="url(#pbi_mask0)" transform="translate(-200)">
+                  <path
+                    d="m 1400,66.75 v 1466.5 c 0,36.86 -29.89,66.75 -66.75,66.75 H 916.75 C 879.885,1600 850,1570.11 850,1533.25 V 66.75 C 850,29.885 879.885,0 916.75,0 h 416.5 c 36.87,0 66.75,29.8849 66.75,66.75 z"
+                    fill="url(#pbi_paint0)" />
+                  <path
+                    d="M 1075,466.667 V 1600 H 525 V 466.667 C 525,429.848 554.848,400 591.667,400 h 416.663 c 36.82,0 66.67,29.848 66.67,66.667 z"
+                    fill="url(#pbi_paint1)" />
+                  <path
+                    d="m 200,866.667 v 666.663 c 0,36.82 29.848,66.67 66.667,66.67 H 750 V 866.667 C 750,829.848 720.152,800 683.333,800 H 266.667 C 229.848,800 200,829.848 200,866.667 Z"
+                    fill="url(#pbi_paint2)" />
+                </g>
+                <defs>
+                  <linearGradient id="pbi_paint0" x1="758.333" y1="0" x2="1447.82" y2="1507.15"
+                    gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#E6AD10" />
+                    <stop offset="1" stop-color="#C87E0E" />
+                  </linearGradient>
+                  <linearGradient id="pbi_paint1" x1="524.955" y1="400" x2="1105.79" y2="1561.67"
+                    gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#F6D751" />
+                    <stop offset="1" stop-color="#E6AD10" />
+                  </linearGradient>
+                  <linearGradient id="pbi_paint2" x1="199.955" y1="800" x2="519.784" y2="1581.68"
+                    gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#F9E589" />
+                    <stop offset="1" stop-color="#F6D751" />
+                  </linearGradient>
+                </defs>
+              </svg>
+              Power BI
+            </span>
+            <span class="skill-tag">
+              <svg width="800px" height="800px" viewBox="0 0 256 256" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="xMidYMid">
+                <g>
+                  <path
+                    d="M244.657778,0 L121.706667,0 C121.706667,14.7201046 127.554205,28.837312 137.962891,39.2459977 C148.371577,49.6546835 162.488784,55.5022222 177.208889,55.5022222 L199.857778,55.5022222 L199.857778,77.3688889 C199.877391,107.994155 224.699178,132.815943 255.324444,132.835556 L255.324444,10.6666667 C255.324444,4.77562934 250.548815,3.60722001e-16 244.657778,0 Z"
+                    fill="#2684FF"></path>
+                  <path
+                    d="M183.822222,61.2622222 L60.8711111,61.2622222 C60.8907238,91.8874888 85.7125112,116.709276 116.337778,116.728889 L138.986667,116.728889 L138.986667,138.666667 C139.025905,169.291923 163.863607,194.097803 194.488889,194.097778 L194.488889,71.9288889 C194.488889,66.0378516 189.71326,61.2622222 183.822222,61.2622222 Z"
+                    fill="#0052CC"></path>
+                  <path
+                    d="M122.951111,122.488889 L0,122.488889 C3.75391362e-15,153.14192 24.8491913,177.991111 55.5022222,177.991111 L78.2222222,177.991111 L78.2222222,199.857778 C78.241767,230.45532 103.020285,255.265647 133.617778,255.324444 L133.617778,133.155556 C133.617778,127.264518 128.842148,122.488889 122.951111,122.488889 Z"
+                    fill="#2684FF"></path>
+                </g>
+              </svg>
+              Jira
+            </span>
+            <span class="skill-tag">
+              <svg width="228" height="120" viewBox="0 0 228 120" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M204 48C192.817 48 183.42 40.3514 180.756 30H153.248C147.382 30 142.376 34.241 141.412 40.0272L140.425 45.9456C139.489 51.5648 136.646 56.4554 132.626 60C136.646 63.5446 139.489 68.4352 140.425 74.0544L141.412 79.9728C142.376 85.759 147.382 90 153.248 90H156.756C159.42 79.6486 168.817 72 180 72C193.255 72 204 82.7452 204 96C204 109.255 193.255 120 180 120C168.817 120 159.42 112.351 156.756 102H153.248C141.516 102 131.504 93.5181 129.575 81.9456L128.588 76.0272C127.624 70.241 122.618 66 116.752 66H107.244C104.58 76.3514 95.183 84 84 84C72.817 84 63.4204 76.3514 60.7561 66H47.2439C44.5796 76.3514 35.183 84 24 84C10.7452 84 0 73.2548 0 60C0 46.7452 10.7452 36 24 36C35.183 36 44.5796 43.6486 47.2439 54H60.7561C63.4204 43.6486 72.817 36 84 36C95.183 36 104.58 43.6486 107.244 54H116.752C122.618 54 127.624 49.759 128.588 43.9728L129.575 38.0544C131.504 26.4819 141.516 18 153.248 18L180.756 18C183.42 7.64864 192.817 0 204 0C217.255 0 228 10.7452 228 24C228 37.2548 217.255 48 204 48ZM204 36C210.627 36 216 30.6274 216 24C216 17.3726 210.627 12 204 12C197.373 12 192 17.3726 192 24C192 30.6274 197.373 36 204 36ZM24 72C30.6274 72 36 66.6274 36 60C36 53.3726 30.6274 48 24 48C17.3726 48 12 53.3726 12 60C12 66.6274 17.3726 72 24 72ZM96 60C96 66.6274 90.6274 72 84 72C77.3726 72 72 66.6274 72 60C72 53.3726 77.3726 48 84 48C90.6274 48 96 53.3726 96 60ZM192 96C192 102.627 186.627 108 180 108C173.373 108 168 102.627 168 96C168 89.3726 173.373 84 180 84C186.627 84 192 89.3726 192 96Z"
+                  fill="#ea4b71" />
+              </svg>
+              n8n
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Projects Section ===== -->
+  <section id="projects" aria-label="Projects">
+    <div class="container">
+      <div class="section-title reveal">
+        <p class="section-label">// what I've built</p>
+        <h2 class="section-heading">
+          <svg class="size-8" width="40" height="40" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+            fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M4 13a8 8 0 0 1 7 7a6 6 0 0 0 3 -5a9 9 0 0 0 6 -8a3 3 0 0 0 -3 -3a9 9 0 0 0 -8 6a6 6 0 0 0 -5 3" />
+            <path d="M7 14a6 6 0 0 0 -3 6a6 6 0 0 0 6 -3" />
+            <path d="M15 9m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+          </svg>
+          Personal <span class="gradient-text">Projects</span>
+        </h2>
+      </div>
+
+      <!-- Carousel wrapper -->
+      <div class="projects-carousel" id="projectsCarousel" aria-label="Projects carousel">
+        <div class="carousel-track" id="carouselTrack">
+
+          <!-- Project 1 -->
+          <div class="project-card" id="project-churn" role="group" aria-label="Project 1 of 4">
+            <div class="project-image">
+              <img src="public/projects/churn-prediction.png" alt="Customer Churn Prediction Dashboard">
+            </div>
+            <div class="project-content">
+              <div class="project-header">
+                <h3 class="project-title">Customer Churn Prediction</h3>
+              </div>
+              <div class="project-tags">
+                <span class="project-tag">Python</span>
+                <span class="project-tag">Scikit-learn</span>
+                <span class="project-tag">Flask</span>
+                <span class="project-tag">Pandas</span>
+                <span class="project-tag">NumPy</span>
+              </div>
+              <p class="project-desc">
+                Full-stack web application predicting telecom customer churn. Applied EDA, feature engineering,
+                and hyperparameter tuning using a Naive Bayes classifier.
+              </p>
+              <div class="project-actions">
+                <a href="#" class="project-btn btn-code" target="_blank">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                    </path>
+                  </svg>
+                  <span>Code</span>
+                </a>
+                <a href="#" class="project-btn btn-preview" target="_blank">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                  <span>Preview</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-card" id="project-football" role="group" aria-label="Project 2 of 4">
+            <div class="project-image">
+              <img src="public/projects/laliga-goals.png" alt="LaLiga Goal Prediction Analysis">
+            </div>
+            <div class="project-content">
+              <div class="project-header">
+                <h3 class="project-title">LaLiga Goal Prediction (xG)</h3>
+              </div>
+              <div class="project-tags">
+                <span class="project-tag">Python</span>
+                <span class="project-tag">Pandas</span>
+                <span class="project-tag">Scikit-learn</span>
+                <span class="project-tag">Seaborn</span>
+              </div>
+              <p class="project-desc">
+                Web application predicting player goals using xG metrics and Poisson modeling.
+                Features interactive visualizations and goal probability distributions.
+              </p>
+              <div class="project-actions">
+                <a href="https://github.com/JaviAzR18/FantasyApp" class="project-btn btn-code" target="_blank">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                    </path>
+                  </svg>
+                  <span>Code</span>
+                </a>
+                <a href="https://fantasy-app-sigma.vercel.app/" class="project-btn btn-preview" target="_blank">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                  <span>Preview</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project-card" id="project-nlp" role="group" aria-label="Project 3 of 4">
+            <div class="project-image">
+              <img src="public/projects/nlp_project.png" alt="NLP Text Summarization Interface">
+            </div>
+            <div class="project-content">
+              <div class="project-header">
+                <h3 class="project-title">NLP Text Summarisation</h3>
+              </div>
+              <div class="project-tags">
+                <span class="project-tag">Python</span>
+                <span class="project-tag">Streamlit</span>
+                <span class="project-tag">NLP</span>
+                <span class="project-tag">ROUGE</span>
+              </div>
+              <p class="project-desc">
+                Extractive and abstractive text summarisation pipeline build with HuggingFace.
+                Evaluated using ROUGE metrics and visualised with Streamlit.
+              </p>
+              <div class="project-actions">
+                <a href="#" class="project-btn btn-code" target="_blank">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                    </path>
+                  </svg>
+                  <span>Code</span>
+                </a>
+                <a href="#" class="project-btn btn-preview" target="_blank">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                  <span>Preview</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="project-card" id="project-spark" role="group" aria-label="Project 4 of 4">
+            <div class="project-image">
+              <img src="public/projects/spark_project.png" alt="Big Data Pipeline Visualization">
+            </div>
+            <div class="project-content">
+              <div class="project-header">
+                <h3 class="project-title">Big Data Pipeline with PySpark</h3>
+              </div>
+              <div class="project-tags">
+                <span class="project-tag">PySpark</span>
+                <span class="project-tag">BigQuery</span>
+                <span class="project-tag">GCP</span>
+                <span class="project-tag">Power BI</span>
+              </div>
+              <p class="project-desc">
+                End-to-end pipeline on GCP transforms large-scale datasets using PySpark and BigQuery.
+                Includes quality checks and Power BI dashboards.
+              </p>
+              <div class="project-actions">
+                <a href="#" class="project-btn btn-code" target="_blank">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                    </path>
+                  </svg>
+                  <span>Code</span>
+                </a>
+                <a href="#" class="project-btn btn-preview" target="_blank">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                  <span>Preview</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /carousel-track -->
+      </div><!-- /projects-carousel -->
+
+      <!-- Carousel controls -->
+      <div class="carousel-controls">
+        <button class="carousel-btn" id="carouselPrev" aria-label="Previous project">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            aria-hidden="true">
+            <polyline points="15 18 9 12 15 6" />
+          </svg>
+        </button>
+        <div class="carousel-dots" id="carouselDots"></div>
+        <button class="carousel-btn" id="carouselNext" aria-label="Next project">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            aria-hidden="true">
+            <polyline points="9 18 15 12 9 6" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== Contact Section ===== -->
+  <section id="contact" aria-label="Contact">
+    <div class="container">
+      <div class="section-title reveal">
+        <p class="section-label">// get in touch</p>
+        <h2 class="section-heading">
+          <svg class="size-8" width="40" height="40" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+            fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M8 9h8" />
+            <path d="M8 13h6" />
+            <path d="M18 4a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-5l-5 3v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12z" />
+          </svg>
+          Let's <span class="gradient-text">Talk</span>
+        </h2>
+      </div>
+
+      <div class="contact-wrapper reveal">
+        <div class="contact-card">
+          <h3>Open to New Opportunities</h3>
+          <p>
+            Whether it's a full-time role, a consulting project, or just a conversation about data and AI —
+            my inbox is always open. Let's turn your data challenges into solutions.
+          </p>
+          <div class="contact-links">
+            <button class="contact-link email" id="contact-email-btn" onclick="copyEmail()"
+              aria-label="Copy email address">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                aria-hidden="true">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+              <span id="emailBtnText">Email Me</span>
+            </button>
+          </div>
+          <!-- Clipboard toast -->
+          <div class="email-toast" id="emailToast" role="status" aria-live="polite">✓ Email copied to clipboard!</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <p>Designed &amp; built by <span>Javier Aznar Ruiz</span> · 2026 · Valencia, Spain 🇪🇸</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
