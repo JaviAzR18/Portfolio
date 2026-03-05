@@ -10,6 +10,9 @@ export const metadata = {
     description: 'Portfolio of Javier Aznar Ruiz, Data Analyst & ML Engineer based in Valencia, Spain.',
     type: 'website',
   },
+  icons: {
+    icon: '/favicon.svg',
+  },
 };
 
 export default function RootLayout({ children }) {
