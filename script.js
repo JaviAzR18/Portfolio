@@ -305,7 +305,7 @@ document.querySelectorAll('.stat-number').forEach(el => statObserver.observe(el)
   const visibleCount = () => 1;
 
   // Have one dot per card as requested
-  const totalSlides = () => cards.length;
+  const totalSlides = () => 2;
   console.log(totalSlides())
   let current = 0;
 
