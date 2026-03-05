@@ -1386,7 +1386,7 @@ Portfolio Script — Javier Aznar Ruiz
               {/* Project 3 */}
               <div className="project-card" id="project-nlp" role="group" aria-label="Project 3 of 4">
                 <div className="project-image">
-                  <img src="/projects/nlp_project.png" alt="NLP Text Summarization Interface" />
+                  <img src="/projects/PDF-SUMM.png" alt="NLP Text Summarization Interface" />
                 </div>
                 <div className="project-content">
                   <div className="project-header">
