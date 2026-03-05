@@ -361,7 +361,7 @@ Portfolio Script — Javier Aznar Ruiz
       const visibleCount = () => 1;
 
       // Have one dot per card as requested
-      const totalSlides = () => 2;
+      const totalSlides = () => 3;
       console.log(totalSlides())
       let current = 0;
 
